@@ -1,0 +1,43 @@
+var blackColr = document.getElementById("blackID")
+var tomatoColr = document.getElementById("tomatoID")
+var violetColr= document.getElementById("violetID")
+var skyblueColr = document.getElementById("skyblueID")
+var time = document.getElementById('timeID');
+var heart =document.getElementById('heartID');
+var sectionBlock = document.getElementById('sectionBlock')
+
+blackColr.addEventListener('click',function(){
+    sectionBlock.style.backgroundColor='black'
+})
+tomatoColr.addEventListener('click',function(){
+    sectionBlock.style.backgroundColor='tomato'
+})
+violetColr.addEventListener('click',function(){
+    sectionBlock.style.backgroundColor='violet'
+})
+skyblueColr.addEventListener('click',function(){
+    sectionBlock.style.backgroundColor='skyBlue'
+})
+time.addEventListener('click',function(){
+  var heartBeat= document.getElementById("gifID");
+   heartBeat.style.height="";
+   heartBeat.style.width="";
+    document.getElementById("gifID").src =""
+})
+heart.addEventListener('click',function(){
+    document.getElementById("clockdisplayId").innerText =""
+   var heartBeat= document.getElementById("gifID");
+   heartBeat.style.height="50px";
+   heartBeat.style.width="50px";
+    heartBeat.src = "https://media1.tenor.com/images/83dac0d012d91f8addd4eeceaf937df0/tenor.gif?itemid=12874954";
+})
+// set and ranges
+// example - String:Same Name Fame Glame
+// pattern:[A-Z]ame
+var str ="9621983219";
+var pattern = /^[\d]{10}$/g
+console.log(str.match(pattern))
+// url matching
+var str ='www.facebook.com';
+var urlPattern =/^www\.[\w]+\.(com|in|org|co)$/g
+console.log(urlPattern)
